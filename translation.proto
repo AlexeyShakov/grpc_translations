@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+service NewsTranslator {
+  rpc GetNews(News) returns (NewsResponse) {}
+}
+
+
+message News {
+  repeated OneNews news = 1;
+}
+
+
+message OneNews {
+  map<string, string> one_news = 1;
+}
+
+
+
+message NewsResponse {
+  string response = 1;
+}
+
