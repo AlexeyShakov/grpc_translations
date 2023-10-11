@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import translation_pb2 as translation__pb2
+from . import translation_pb2 as translation__pb2
 
 
 class NewsTranslatorStub(object):
