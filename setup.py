@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="grpc_translations",
+    name="grpc_service",
     version="0.0.1",
     package_dir={"": "app"},
     packages=find_packages(where="app"),

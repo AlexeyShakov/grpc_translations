@@ -1,0 +1,13 @@
+setup.py
+app/grpc_service/__init__.py
+app/grpc_service.egg-info/PKG-INFO
+app/grpc_service.egg-info/SOURCES.txt
+app/grpc_service.egg-info/dependency_links.txt
+app/grpc_service.egg-info/requires.txt
+app/grpc_service.egg-info/top_level.txt
+app/grpc_telegram/__init__.py
+app/grpc_telegram/telegram_pb2.py
+app/grpc_telegram/telegram_pb2_grpc.py
+app/grpc_translations/__init__.py
+app/grpc_translations/translation_pb2.py
+app/grpc_translations/translation_pb2_grpc.py
