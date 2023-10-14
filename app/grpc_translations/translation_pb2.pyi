@@ -12,17 +12,44 @@ class News(_message.Message):
     def __init__(self, news: _Optional[_Iterable[_Union[OneNews, _Mapping]]] = ...) -> None: ...
 
 class OneNews(_message.Message):
-    __slots__ = ["one_news"]
-    class OneNewsEntry(_message.Message):
+    __slots__ = ["id", "link", "title", "short_description"]
+    class IdEntry(_message.Message):
         __slots__ = ["key", "value"]
         KEY_FIELD_NUMBER: _ClassVar[int]
         VALUE_FIELD_NUMBER: _ClassVar[int]
         key: str
         value: str
         def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
-    ONE_NEWS_FIELD_NUMBER: _ClassVar[int]
-    one_news: _containers.ScalarMap[str, str]
-    def __init__(self, one_news: _Optional[_Mapping[str, str]] = ...) -> None: ...
+    class LinkEntry(_message.Message):
+        __slots__ = ["key", "value"]
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: str
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+    class TitleEntry(_message.Message):
+        __slots__ = ["key", "value"]
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: str
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+    class ShortDescriptionEntry(_message.Message):
+        __slots__ = ["key", "value"]
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: str
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+    ID_FIELD_NUMBER: _ClassVar[int]
+    LINK_FIELD_NUMBER: _ClassVar[int]
+    TITLE_FIELD_NUMBER: _ClassVar[int]
+    SHORT_DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
+    id: _containers.ScalarMap[str, str]
+    link: _containers.ScalarMap[str, str]
+    title: _containers.ScalarMap[str, str]
+    short_description: _containers.ScalarMap[str, str]
+    def __init__(self, id: _Optional[_Mapping[str, str]] = ..., link: _Optional[_Mapping[str, str]] = ..., title: _Optional[_Mapping[str, str]] = ..., short_description: _Optional[_Mapping[str, str]] = ...) -> None: ...
 
 class NewsResponse(_message.Message):
     __slots__ = ["response"]

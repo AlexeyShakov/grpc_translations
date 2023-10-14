@@ -13,23 +13,35 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11translation.proto\"\x1e\n\x04News\x12\x16\n\x04news\x18\x01 \x03(\x0b\x32\x08.OneNews\"b\n\x07OneNews\x12\'\n\x08one_news\x18\x01 \x03(\x0b\x32\x15.OneNews.OneNewsEntry\x1a.\n\x0cOneNewsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\" \n\x0cNewsResponse\x12\x10\n\x08response\x18\x01 \x01(\t23\n\x0eNewsTranslator\x12!\n\x07GetNews\x12\x05.News\x1a\r.NewsResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11translation.proto\"\x1e\n\x04News\x12\x16\n\x04news\x18\x01 \x03(\x0b\x32\x08.OneNews\"\xe7\x02\n\x07OneNews\x12\x1c\n\x02id\x18\x01 \x03(\x0b\x32\x10.OneNews.IdEntry\x12 \n\x04link\x18\x02 \x03(\x0b\x32\x12.OneNews.LinkEntry\x12\"\n\x05title\x18\x03 \x03(\x0b\x32\x13.OneNews.TitleEntry\x12\x39\n\x11short_description\x18\x04 \x03(\x0b\x32\x1e.OneNews.ShortDescriptionEntry\x1a)\n\x07IdEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a+\n\tLinkEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a,\n\nTitleEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x37\n\x15ShortDescriptionEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\" \n\x0cNewsResponse\x12\x10\n\x08response\x18\x01 \x01(\t23\n\x0eNewsTranslator\x12!\n\x07GetNews\x12\x05.News\x1a\r.NewsResponse\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'translation_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _ONENEWS_ONENEWSENTRY._options = None
-  _ONENEWS_ONENEWSENTRY._serialized_options = b'8\001'
+  _ONENEWS_IDENTRY._options = None
+  _ONENEWS_IDENTRY._serialized_options = b'8\001'
+  _ONENEWS_LINKENTRY._options = None
+  _ONENEWS_LINKENTRY._serialized_options = b'8\001'
+  _ONENEWS_TITLEENTRY._options = None
+  _ONENEWS_TITLEENTRY._serialized_options = b'8\001'
+  _ONENEWS_SHORTDESCRIPTIONENTRY._options = None
+  _ONENEWS_SHORTDESCRIPTIONENTRY._serialized_options = b'8\001'
   _globals['_NEWS']._serialized_start=21
   _globals['_NEWS']._serialized_end=51
-  _globals['_ONENEWS']._serialized_start=53
-  _globals['_ONENEWS']._serialized_end=151
-  _globals['_ONENEWS_ONENEWSENTRY']._serialized_start=105
-  _globals['_ONENEWS_ONENEWSENTRY']._serialized_end=151
-  _globals['_NEWSRESPONSE']._serialized_start=153
-  _globals['_NEWSRESPONSE']._serialized_end=185
-  _globals['_NEWSTRANSLATOR']._serialized_start=187
-  _globals['_NEWSTRANSLATOR']._serialized_end=238
+  _globals['_ONENEWS']._serialized_start=54
+  _globals['_ONENEWS']._serialized_end=413
+  _globals['_ONENEWS_IDENTRY']._serialized_start=224
+  _globals['_ONENEWS_IDENTRY']._serialized_end=265
+  _globals['_ONENEWS_LINKENTRY']._serialized_start=267
+  _globals['_ONENEWS_LINKENTRY']._serialized_end=310
+  _globals['_ONENEWS_TITLEENTRY']._serialized_start=312
+  _globals['_ONENEWS_TITLEENTRY']._serialized_end=356
+  _globals['_ONENEWS_SHORTDESCRIPTIONENTRY']._serialized_start=358
+  _globals['_ONENEWS_SHORTDESCRIPTIONENTRY']._serialized_end=413
+  _globals['_NEWSRESPONSE']._serialized_start=415
+  _globals['_NEWSRESPONSE']._serialized_end=447
+  _globals['_NEWSTRANSLATOR']._serialized_start=449
+  _globals['_NEWSTRANSLATOR']._serialized_end=500
 # @@protoc_insertion_point(module_scope)
