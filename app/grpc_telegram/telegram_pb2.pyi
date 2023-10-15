@@ -18,8 +18,8 @@ class OneTranslatedNews(_message.Message):
         KEY_FIELD_NUMBER: _ClassVar[int]
         VALUE_FIELD_NUMBER: _ClassVar[int]
         key: str
-        value: str
-        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+        value: int
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[int] = ...) -> None: ...
     class LinkEntry(_message.Message):
         __slots__ = ["key", "value"]
         KEY_FIELD_NUMBER: _ClassVar[int]
@@ -45,11 +45,11 @@ class OneTranslatedNews(_message.Message):
     LINK_FIELD_NUMBER: _ClassVar[int]
     TRANSLATED_TITLE_FIELD_NUMBER: _ClassVar[int]
     TRANSLATED_SHORT_DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
-    id: _containers.ScalarMap[str, str]
+    id: _containers.ScalarMap[str, int]
     link: _containers.ScalarMap[str, str]
     translated_title: _containers.ScalarMap[str, str]
     translated_short_description: _containers.ScalarMap[str, str]
-    def __init__(self, id: _Optional[_Mapping[str, str]] = ..., link: _Optional[_Mapping[str, str]] = ..., translated_title: _Optional[_Mapping[str, str]] = ..., translated_short_description: _Optional[_Mapping[str, str]] = ...) -> None: ...
+    def __init__(self, id: _Optional[_Mapping[str, int]] = ..., link: _Optional[_Mapping[str, str]] = ..., translated_title: _Optional[_Mapping[str, str]] = ..., translated_short_description: _Optional[_Mapping[str, str]] = ...) -> None: ...
 
 class TranslatedNewsResponse(_message.Message):
     __slots__ = ["response"]
